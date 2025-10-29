@@ -29,8 +29,8 @@
 
 		chmod 4744 file
 
-    To find all files with the SUID bit set, use:
-		find / -type f -perm -4000 2>/dev/null
+    To find all files with the SUID bit set,
+		>find / -type f -perm -4000 2>/dev/null<
 
     SUID shows as an s in the owner’s execute position in ls -l, indicating the file runs with the owner’s permissions.
 	
