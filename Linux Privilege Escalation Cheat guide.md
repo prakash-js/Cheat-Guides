@@ -1,5 +1,17 @@
 # Fundamental Linux Privilege Escalation Cheat guide
 
+* ## OS & Kernel version → Privilege Escalation
+ Determine the OS and kernel version of the compromised machine and search public vulnerability databases (NVD, Exploit-DB, searchsploit, vendor advisories) for matching CVEs. Version strings help you find kernel CVEs and distro-specific package issues that may enable privilege escalation.
+
+   To find versions:
+   
+   - `uname -r`              # kernel release (best for kernel CVE lookups)
+   - `uname -a`              # full kernel string and basic system details
+   - `cat /etc/os-release`   # distro name and version
+   - `lsb_release -a`        # additional distro info (if available)
+   - `hostnamectl`           # OS + kernel on systemd systems
+   - `cat /proc/version`     # kernel build info
+
 * ## Weak file permissions on /etc/shadow
   After obtaining a shell, check whether the current user can access /etc/shadow. This file contains the password hashes for system accounts.
 
