@@ -25,18 +25,15 @@
   * ## SUID Binary
     SUID is a special permission bit that allows a user to execute a file with the permissions of the file’s owner instead of their own.
 
-    Use chmod with a 4 in front of the normal permission digits.To create one.
+	Use chmod with a 4 in front of the normal permission digits.To create one.
+		- chmod 4744 file
+		
+	To find all files with the SUID bit set, use:
+		- find / -type f -perm -4000 2>/dev/null
+		
+	SUID shows as an s in the owner’s execute position in ls -l, indicating the file runs with the owner’s permissions.
+		- rwsr--r--
 
-		chmod 4744 file
-
-    To find all files with the SUID bit set,
-		>find / -type f -perm -4000 2>/dev/null<
-
-    SUID shows as an s in the owner’s execute position in ls -l, indicating the file runs with the owner’s permissions.
-	
-		 rwsr--r--
-
-    (If an unprivileged user runs the file with SUID, it executes with the permissions of the file’s owner (creator).)
-
+	(If an unprivileged user runs the file with SUID, it executes with the permissions of the file’s owner creator)
 
   
