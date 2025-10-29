@@ -8,9 +8,9 @@
    - `uname -r`              -  kernel release (best for kernel CVE lookups)
    - `uname -a`              -  full kernel string and basic system details
    - `cat /etc/os-release`   -  distro name and version
-   - `lsb_release -a`        # additional distro info (if available)
-   - `hostnamectl`           # OS + kernel on systemd systems
-   - `cat /proc/version`     # kernel build info
+   - `lsb_release -a`        -  additional distro info (if available)
+   - `hostnamectl`           -  OS, kernel and system hardware info
+   - `cat /proc/version`     -  kernel build info
 
 * ## Weak file permissions on /etc/shadow
   After obtaining a shell, check whether the current user can access /etc/shadow. This file contains the password hashes for system accounts.
