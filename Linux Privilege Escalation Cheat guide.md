@@ -11,3 +11,6 @@
 
 * ## SSH keys 
   Look for private SSH keys (like id_rsa) because these files can authenticate SSH logins as other users — use “find” cmd to search the filesystem for “id_rsa” (and variants), check their permissions,   and if accessible copy the key to attacker machine (keeping it at 600) and attempt SSH with that private key.
+
+    - find / -name id_rsa 2> /dev/null
+    - ssh -i id_rsa user@<ip>
