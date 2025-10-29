@@ -20,4 +20,6 @@
 
    - sudo -l
 
-Use GTFOBins [https://gtfobins.github.io](https://gtfobins.github.io) as a quick reference for abusing common binaries — check the SUID, sudo and file read/write tricks for any binary you find.
+  Use GTFOBins [https://gtfobins.github.io](https://gtfobins.github.io) as a quick reference for abusing common binaries — check the SUID, sudo and file read/write tricks for any binary you find.
+
+  
