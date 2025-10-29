@@ -47,16 +47,18 @@
 * ## Cron jobs
   Cron jobs are used to run scripts or binaries at specific times. By default, they run with the privilege of their owners and not the current user. While properly configured cron jobs are not      inherently vulnerable, they can provide a privilege escalation vector under some conditions.
   Any user can read the file keeping system-wide cron jobs under /etc/crontab
+  
   for example
 
-0 2 * * * /home/user/backup.sh
+	  0 2 * * * /home/user/backup.sh
 
-This means: Run /home/user/backup.sh every day at 2:00 AM.
+  This means: Run /home/user/backup.sh every day at 2:00 AM.
 
-* * * * * /home/user/backup.sh
-This runs /home/user/backup.sh every minute.
+  		* * * * * /home/user/backup.sh
+  This runs /home/user/backup.sh every minute.
 
-If /home/user/backup.sh is writable by a compromised user, that user could replace it with a malicious script. When cron executes the file, the attacker’s code will run with the privileges of the cron job.
-If the job runs as root (e.g., in root’s crontab or /etc/crontab with root as the user), this can lead to root access; if it runs as a normal user, the attacker will gain that user’s privileges.
+
+  If /home/user/backup.sh is writable by a compromised user, that user could replace it with a malicious script. When cron executes the file, the attacker’s code will run with the privileges of the cron job.
+  If the job runs as root (e.g., in root’s crontab or /etc/crontab with root as the user), this can lead to root access; if it runs as a normal user, the attacker will gain that user’s privileges.
 
   
