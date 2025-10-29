@@ -6,3 +6,4 @@
   If the file is accessible, copy the entire line related to the particular user and store it on your attacker machine (hash.txt).
 
   Use hashcat mode 1800 (sha512crypt) to crack the obtained hash
+    - hashcat -m 1800 <hash> <password.list>
