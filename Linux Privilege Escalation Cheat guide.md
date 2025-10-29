@@ -14,3 +14,10 @@
 
     - find / -name id_rsa 2> /dev/null
     - ssh -i id_rsa user@<ip>
+
+* ## Sudo -l Privilege Opportunities
+  The sudo -l command lists all the commands the current user is allowed (or not allowed) to run with sudo privileges. It helps identify misconfigurations or privilege escalation opportunities. If a user has permission to run certain commands as root without a password, those can often be abused to gain full system access.
+
+   - sudo -l
+
+Use GTFOBins [A link to that custom anchor](https://gtfobins.github.io)] as a quick reference for abusing common binaries — check the SUID, sudo and file read/write tricks for any binary you find.
