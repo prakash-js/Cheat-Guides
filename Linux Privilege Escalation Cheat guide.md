@@ -69,8 +69,22 @@
   		* * * * * /home/user/backup.sh
   This runs /home/user/backup.sh every minute.
 
-
   If /home/user/backup.sh is writable by a compromised user, that user could replace it with a malicious script. When cron executes the file, the attacker’s code will run with the privileges of the cron job.
   If the job runs as root (e.g., in root’s crontab or /etc/crontab with root as the user), this can lead to root access; if it runs as a normal user, the attacker will gain that user’s privileges.
 
-  
+  * ## PATH based privilege Escaltion
+  PATH is an environment variable that lists directories the shell searches to find executable programs.
+  Path‑based privilege escalation requires a higher‑privilege execution context (e.g. a SUID binary, root cron job, or system service) that resolves executables via PATH.
+
+  Example of PATH-Based Privilege Escalation:
+ If a root-level SUID binary requires another helper binary to execute, we can create a duplicate/malformed binary with the same name in /tmp and prepend /tmp to PATH.
+ Similarly, if a cron job or privileged process expects an executable from PATH, we can place the duplicate in /tmp and prepend /tmp.
+
+ PATH Modification:
+
+ Prepend /tmp: `export PATH=/tmp:$PATH     #/tmp is searched first.`
+
+ Append /tmp: `export PATH=$PATH:/tmp      #/tmp is searched last.`
+
+ Key point: PATH is searched left → right, so prepending your directory ensures your executable is found before the original.
+ 
