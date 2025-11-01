@@ -55,8 +55,9 @@
 
 
 	(If an unprivileged user runs the file with SUID, it executes with the permissions of the file’s owner (creator))
-	
-* ## Cron jobs
+
+
+  * ## Cron jobs
   Cron jobs are used to run scripts or binaries at specific times. By default, they run with the privilege of their owners and not the current user. While properly configured cron jobs are not      inherently vulnerable, they can provide a privilege escalation vector under some conditions.
   Any user can read the file keeping system-wide cron jobs under /etc/crontab
   
@@ -72,7 +73,8 @@
   If /home/user/backup.sh is writable by a compromised user, that user could replace it with a malicious script. When cron executes the file, the attacker’s code will run with the privileges of the cron job.
   If the job runs as root (e.g., in root’s crontab or /etc/crontab with root as the user), this can lead to root access; if it runs as a normal user, the attacker will gain that user’s privileges.
 
-  * ## PATH based privilege Escaltion
+
+ * ## PATH based privilege Escaltion
   PATH is an environment variable that lists directories the shell searches to find executable programs.
   Path‑based privilege escalation requires a higher‑privilege execution context (e.g. a SUID binary, root cron job, or system service) that resolves executables via PATH.
 
