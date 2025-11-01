@@ -75,18 +75,18 @@
 
 
  * ## PATH based privilege Escaltion
-  PATH is an environment variable that lists directories the shell searches to find executable programs.
-  Path‑based privilege escalation requires a higher‑privilege execution context (e.g. a SUID binary, root cron job, or system service) that resolves executables via PATH.
-
-  Example of PATH-Based Privilege Escalation:
- If a root-level SUID binary requires another helper binary to execute, we can create a duplicate/malformed binary with the same name in /tmp and prepend /tmp to PATH.
- Similarly, if a cron job or privileged process expects an executable from PATH, we can place the duplicate in /tmp and prepend /tmp.
-
- PATH Modification:
-
- Prepend /tmp: `export PATH=/tmp:$PATH     #/tmp is searched first.`
-
- Append /tmp: `export PATH=$PATH:/tmp      #/tmp is searched last.`
-
- Key point: PATH is searched left → right, so prepending your directory ensures your executable is found before the original.
+	  PATH is an environment variable that lists directories the shell searches to find executable programs.
+	  Path‑based privilege escalation requires a higher‑privilege execution context (e.g. a SUID binary, root cron job, or system service) that resolves executables via PATH.
+	
+	  Example of PATH-Based Privilege Escalation:
+	 If a root-level SUID binary requires another helper binary to execute, we can create a duplicate/malformed binary with the same name in /tmp and prepend /tmp to PATH.
+	 Similarly, if a cron job or privileged process expects an executable from PATH, we can place the duplicate in /tmp and prepend /tmp.
+	
+	 PATH Modification:
+	
+	 Prepend /tmp: `export PATH=/tmp:$PATH     #/tmp is searched first.`
+	
+	 Append /tmp: `export PATH=$PATH:/tmp      #/tmp is searched last.`
+	
+	 Key point: PATH is searched left → right, so prepending your directory ensures your executable is found before the original.
  
