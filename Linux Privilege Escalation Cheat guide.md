@@ -57,7 +57,7 @@
 	(If an unprivileged user runs the file with SUID, it executes with the permissions of the file’s owner (creator))
 
 
-  * ## Cron jobs
+* ## Cron jobs
   Cron jobs are used to run scripts or binaries at specific times. By default, they run with the privilege of their owners and not the current user. While properly configured cron jobs are not      inherently vulnerable, they can provide a privilege escalation vector under some conditions.
   Any user can read the file keeping system-wide cron jobs under /etc/crontab
   
