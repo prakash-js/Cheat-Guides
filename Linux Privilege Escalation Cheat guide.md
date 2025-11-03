@@ -89,4 +89,14 @@
 	 Append /tmp: `export PATH=$PATH:/tmp      #/tmp is searched last.`
 	
 	 Key point: PATH is searched left → right, so prepending your directory ensures your executable is found before the original.
- 
+
+	 * ## Local port forward (SSH)
+	   Local port forwarding (ssh -L) is not privilege escalation. It just lets you use a service running on the compromised machine’s localhost from your attacker machine.
+       Use it when a web admin panel or GUI runs only on 127.0.0.1 of the target and you can’t open it from the shell.
+       To find services bound to localhost on the compromised machine, run on the target
+       		`netstat -tulpn | grep 127.0.0.1`
+       This shows which ports are listening. If you find a useful port, forward it to your attacker machine by 
+	   
+       		`ssh -L <local_port>:<target_host>:<target_port> user@target_host`
+         run this on the attacker machine
+		 After this, the port is forwarded, and you can access the service on your attacker machine using localhost:<local_port>
