@@ -10,12 +10,12 @@ In Windows, there are two main environments for running commands: cmd.exe and po
 
 # Some Basic Command in cmd.exe
 
-* systeminfo - Displays detailed information about the system.
-* whoami - Displays the username of the account currently executing the command.
-* whoami /groups - it lists all the groups the current user is a member of.
-* cd - command is used for directory navigation.
-    * cd              Displays the current directory.    
-    * cd ..           Moves back to the parent directory.
-    * cd dir-name     Enters the specified directory.
-* where <that.exe>
+* `systeminfo` - Displays detailed information about the system.
+* `whoami` - Displays the username of the account currently executing the command.
+* `whoami /groups` - it lists all the groups the current user is a member of.
+* `cd` - command is used for directory navigation.
+    * `cd`              Displays the current directory.    
+    * `cd ..`           Moves back to the parent directory.
+    * `cd <dir-name>`     Enters the specified directory.
+* `where <that.exe>`
 
