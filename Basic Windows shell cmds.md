@@ -17,4 +17,5 @@ In Windows, there are two main environments for running commands: cmd.exe and po
     * cd              Displays the current directory.    
     * cd ..           Moves back to the parent directory.
     * cd dir-name     Enters the specified directory.
+* where <that.exe>
 
