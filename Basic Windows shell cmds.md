@@ -32,7 +32,7 @@ In Windows, there are two main environments for running commands: cmd.exe and po
 
 
 * `icacls`  Helps change file or folder permissions and ownership.
- * `icacls "C:\path\to\folder" /setowner username /T` Changes the owner of a file or folder — and applies the change recursively to all subfolders and file and Without **/T** Changes owner only for that folder itself NOT recursive.
+   * `icacls "C:\path\to\folder" /setowner username /T` Changes the owner of a file or folder — and applies the change recursively to all subfolders and file and Without **/T** Changes owner only for that folder itself NOT recursive.
 
 
 
