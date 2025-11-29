@@ -10,14 +10,14 @@ In Windows, there are two main environments for running commands: cmd.exe and po
 
 # Some Basic Command in cmd.exe
 
-* `systeminfo` - Displays detailed information about the system.
-* `whoami` - Displays the username of the account currently executing the command.
-  * `whoami /groups` - it lists all the groups the current user is a member of.
-  * `whoami /priv` – Shows the privileges assigned to the current user.
+* `systeminfo`  Displays detailed information about the system.
+* `whoami`  Displays the username of the account currently executing the command.
+  * `whoami /groups`  it lists all the groups the current user is a member of.
+  * `whoami /priv`  Shows the privileges assigned to the current user.
 
 
 
-* `cd` - command is used for directory navigation.
+* `cd`  command is used for directory navigation.
   * `cd`              Displays the current directory.
   * `cd ..`           Moves back to the parent directory.
   * `cd <dir-name>`     Enters the specified directory.
@@ -27,7 +27,11 @@ In Windows, there are two main environments for running commands: cmd.exe and po
   * `ipconfig /all` Shows complete network configuration details for all adapters.
   * `ipconfig /?` Displays the help menu for the ipconfig command
     
-*
+* `tasklist` Displays a list of all running processes on the system.
+   `tasklist /?` Shows the help menu for tasklist, allowing you to explore additional options that provide more flexibility
+
+
+* `icacls`  Helps change file or folder permissions and ownership.
 
 
 
