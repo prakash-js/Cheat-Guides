@@ -22,6 +22,14 @@ In Windows, there are two main environments for running commands: cmd.exe and po
   * `cd ..`           Moves back to the parent directory.
   * `cd <dir-name>`     Enters the specified directory.
 
+* `net accounts` Shows password and login policy settings.
+* `ipconfig` Displays basic IP configuration details for all active network adapters.
+  * `ipconfig /all` Shows complete network configuration details for all adapters.
+  * `ipconfig /?` Displays the help menu for the ipconfig command
+    
+*
+
+
 
 
 * `where <that.exe>` -  Searches exe in  PATH directories
