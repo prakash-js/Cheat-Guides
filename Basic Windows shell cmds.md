@@ -14,7 +14,7 @@ In Windows, there are two main environments for running commands: cmd.exe and po
 * whoami - Displays the username of the account currently executing the command.
 * whoami /groups - it lists all the groups the current user is a member of.
 * cd - command is used for directory navigation.
-    * cd .. – Moves back to the parent directory.
-    * cd <dir-name> – Enters the specified directory.
-    * cd \ - Moves to the root directory.
-    * cd - Displays the current directory.
+    * **cd ..**   – Moves back to the parent directory.
+    * **cd <dir-name>**   – Enters the specified directory.
+    * **cd \**  - Moves to the root directory.
+    * ** cd**   - Displays the current directory.
