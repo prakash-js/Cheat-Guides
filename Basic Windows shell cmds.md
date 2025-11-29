@@ -1,6 +1,6 @@
+## Windows Shells Overview
 
-
-In Windows, there are two ways to use commands: cmd.exe and powershell.exe.
+In Windows, there are two main environments for running commands: cmd.exe and powershell.exe.
 
 
 **CMD** is a traditional, text-based command-line interpreter based on MS-DOS. It has been a part of Windows operating systems for decades and offers limited updates.
