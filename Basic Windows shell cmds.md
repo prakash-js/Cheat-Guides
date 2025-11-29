@@ -28,10 +28,11 @@ In Windows, there are two main environments for running commands: cmd.exe and po
   * `ipconfig /?` Displays the help menu for the ipconfig command
     
 * `tasklist` Displays a list of all running processes on the system.
-   `tasklist /?` Shows the help menu for tasklist, allowing you to explore additional options that provide more flexibility
+   * `tasklist /?` Shows the help menu for tasklist, allowing you to explore additional options that provide more flexibility
 
 
 * `icacls`  Helps change file or folder permissions and ownership.
+   `icacls "C:\path\to\folder" /setowner username /T` Changes the owner of a file or folder — and applies the change recursively to all subfolders and file and Without **/T** Changes owner only for that folder itself NOT recursive.
 
 
 
