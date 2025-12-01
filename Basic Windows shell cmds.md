@@ -32,7 +32,7 @@ In Windows, there are two main environments for running commands: cmd.exe and po
 
 
 * `icacls`  Helps change file or folder permissions and ownership.In NTFS, every object (file/folder/registry key) has exactly one owner.
-   * `dir main.cpp /q` 
+   * `dir main.cpp /q` will show the current owner of the file.
    * (I) — Inherited - This permission is inherited from the parent folder and automatically applies to all child files/subfolders unless inheritance is disabled.
    * `icacls "C:\path\to\folder" /setowner username /T` Changes the owner of a file or folder — and applies the change recursively to all subfolders and file and Without **/T** Changes owner only for that folder itself NOT recursive.
    * 
