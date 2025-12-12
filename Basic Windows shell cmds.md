@@ -46,6 +46,13 @@ In Windows, there are two main environments for running commands: cmd.exe and po
          * w  -> Write
          * D  -> Delete
 
+    * **Inheritance** means child files and subfolders automatically receive the same permissions as their parent folder unless explicitly overridden.
+         * (OI) ->  Files inside the folder
+         * (OI) ->  Subfolders inside the folder
+
+    * Example   icacls <folder> /grant <user>:(OI)(CI)F
+         
+
 
 
 
