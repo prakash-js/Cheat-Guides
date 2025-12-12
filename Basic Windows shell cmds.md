@@ -53,13 +53,11 @@ In Windows, there are two main environments for running commands: cmd.exe and po
     * Example   icacls <folder> /grant <user>:(OI)(CI)F /T
 
         /T tells ICACLS to push those inherited permissions down through all existing subfolders
-    
-         
 
 
-
-
-* `where <that.exe>` -  Searches exe in  PATH directories
-* `where.exe /r <Path> <filename>` -  helps to search for a file recursively (/r) under the specified path.
+* `where` is a command that locates files on Windows by searching specific directories.
+  
+   * `where.exe /r <Path> <filename>` -  helps to search for a file recursively (/r) under the specified path.
+   * `where some.exe`  -  Searches only the current directory and all directories listed in the PATH (non-recursive).   
 
 
