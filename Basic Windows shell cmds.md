@@ -38,6 +38,13 @@ In Windows, there are two main environments for running commands: cmd.exe and po
    * (I) — Inherited - This permission is inherited from the parent folder and automatically applies to all child files/subfolders unless inheritance is disabled.
    * `icacls "<C:\path\to\folder or file>" /setowner username /T` Changes the owner of a file or folder — and applies the change recursively to all subfolders and file and Without **/T** Changes owner only for that folder itself NOT recursive.
    * `icacls <file> /grant <user>:F` - give user <user> full control(F) only for that file or folder no inheritance, for inheritance we must specify inheritance flags
+  
+      * **Permission Flags**
+         * F  -> Full COntrol
+         * RX -> Read and Execute
+         * R  -> Read
+         * w  -> Write
+         * D  -> Delete
 
 
 
