@@ -43,5 +43,6 @@ In Windows, there are two main environments for running commands: cmd.exe and po
 
 
 * `where <that.exe>` -  Searches exe in  PATH directories
+* `where.exe /r <Path> <filename>` -  helps to search for a file recursively (/r) under the specified path.
 
 
