@@ -29,3 +29,33 @@ It is used to manage and inspect systemd units, including
   - timer  -> scheduled tasks (cron alternative)  
   - mount -> filesystems
   - target -> boot states (runlevels replacement)
+
+## Service Operations with systemd (via systemctl)
+Using systemd, we can perform the following operations on services through the systemctl command:
+
+  - enable -> configure a service to start automatically at boot
+
+- disable -> prevent a service from starting automatically at boot
+
+- start -> start a service immediately (current session only)
+
+- restart -> stop and then start a service again
+
+- stop -> stop a running service
+
+- status -> display the current state and recent logs of a service
+
+Example Sytax:
+```
+systemctl start <service>
+systemctl stop <service>
+systemctl restart <service>
+systemctl enable <service>
+systemctl disable <service>
+```
+To List the Active and Inactive units
+
+` systemctl list-units --all `
+
+To list all the active units alone
+` systemctl list-units --all  `
