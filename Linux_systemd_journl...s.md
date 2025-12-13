@@ -58,4 +58,10 @@ To List the Active and Inactive units
 ` systemctl list-units --all `
 
 To list all the active units alone
-` systemctl list-units --all  `
+
+` systemctl list-units  `
+
+We can use the --type option with systemctl to filter and display only the specific unit type we need.
+
+` systemctl list-units  --type=<name_of_the_unit>  `
+
