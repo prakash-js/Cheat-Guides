@@ -60,4 +60,17 @@ In Windows, there are two main environments for running commands: cmd.exe and po
    * `where.exe /r <Path> <filename>` -  helps to search for a file recursively (/r) under the specified path.
    * `where some.exe`  -  Searches only the current directory and all directories listed in the PATH (non-recursive).   
 
+Download Files in Windows CMD Using Certutil
+* `Certutil -urlcache -split -f  <URL>  <save.txt>`
+     * --urlcache -> download content from a URL.
+     
+     * -f -> Forces overwrite if the file already exists.
+     
+     * -split -> Handles larger files by downloading in chunks (important for reliability).
+
+(or)
+
+
+* `curl -o first.exe https://example.com/first.exe`
+
 
