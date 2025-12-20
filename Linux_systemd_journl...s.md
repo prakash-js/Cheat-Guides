@@ -82,7 +82,17 @@ We can use the --type option with systemctl to filter and display only the speci
 
 ` systemctl list-units  --type=<name_of_the_unit>  `
 
+# Creating Service in Linux 
 
+In Linux systems that use systemd, any executable binary or script can be managed as a service.
 
+To do this, we create a unit file with the extension {filename}.service
+  `/etc/systemd/system/{yourservice}.service`
+  
+A .service file is divided into three logical sections, each with a specific responsibility.
+
+  * [Unit] -> Metadata & ordering.
+  * [Service] -> Execution details, core of the service.
+  * [Install] -> Boot-time integration.
 
 
