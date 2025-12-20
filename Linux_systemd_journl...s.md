@@ -191,7 +191,6 @@ Restart=always -> restart no matter how it exits
 
 RestartSec= -> delay before restarting  `RestartSec=80`
 
-RestartSec= → delay before restarting
 
 **User & Groups**
 
