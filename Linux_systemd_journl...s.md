@@ -68,3 +68,5 @@ We can use the --type option with systemctl to filter and display only the speci
 
 ` systemctl list-units  --type=<name_of_the_unit>  `
 
+
+
