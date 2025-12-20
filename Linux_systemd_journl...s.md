@@ -1,7 +1,8 @@
 #  **Systemd**
 
 Systemd is the init (first process started by the kernel, PID 1) system and service manager used in modern Linux operating systems.
-After the Linux kernel boots, it starts /sbin/init as the first user-space process which on modern systems is a symlink to the systemd binary(/lib/systemd/systemd).
+After the Linux kernel boots, it starts /sbin/init as the first user-space process which on modern systems is a symlink to the systemd binary(/usr/lib/systemd/systemd or /lib/systemd/systemd).
+
 Systemd initializes the system, starts and manages services, handles dependencies, monitors processes, and provides tools such as systemctl (service control) and journald (logging).
 
 Systemd defines and manages all system unit types (such as services, sockets, timers, devices, and automounts). However, during boot, the init process (systemd running as PID 1) starts only those units that are explicitly configured, enabled for the active target, or triggered by activation mechanisms. All other units remain inactive until required.
