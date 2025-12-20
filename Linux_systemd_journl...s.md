@@ -57,8 +57,8 @@ Some Target name with purpose
 | basic.target           | Basic system services started; rarely used directly  |
 
 
-what so daemon?
-
+## what is daemon?
+daemon is a computer program that runs as a background process rather than under the direct control of an interactive user.
 
 # systemctl
 systemctl is the command-line tool used to control and manage services and system state on Linux systems that use systemd.
