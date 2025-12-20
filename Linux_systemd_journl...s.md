@@ -7,6 +7,20 @@ Systemd initializes the system, starts and manages services, handles dependencie
 
 Systemd defines and manages all system unit types (such as services, sockets, timers, devices, and automounts). However, during boot, the init process (systemd running as PID 1) starts only those units that are explicitly configured, enabled for the active target, or triggered by activation mechanisms. All other units remain inactive until required.
 
+### Common directories for systemd  units
+`/etc/systemd/system/`
+Stores administrator-defined unit files overrides, and enablement symlinks.
+This directory has the **highest priority** and is the correct place to create or modify services.
+
+
+`/run/systemd/system/`
+Stores runtime-generated unit files created during boot or at runtime.
+Contents are temporary and are lost after a reboot.
+
+`/lib/systemd/system/ (or /usr/lib/systemd/system/)`
+Stores vendor-provided default unit files installed by system packages.
+These files should not be modified directly.
+
 ## What is a Symlink? 
 
 A symbolic link (symlink) is a special file that points to another file or directory.
@@ -67,6 +81,8 @@ To list all the active units alone
 We can use the --type option with systemctl to filter and display only the specific unit type we need.
 
 ` systemctl list-units  --type=<name_of_the_unit>  `
+
+
 
 
 
