@@ -57,6 +57,9 @@ Some Target name with purpose
 | basic.target           | Basic system services started; rarely used directly  |
 
 
+what so daemon?
+
+
 # systemctl
 systemctl is the command-line tool used to control and manage services and system state on Linux systems that use systemd.
 It is used to manage and inspect systemd units, including 
@@ -213,6 +216,40 @@ WantedBy=multi-user.target graphical.target
 You usually pair it with WantedBy=multi-user.target for standard services.
 Multiple targets can be specified if needed.
 
+## Complete Example Service
+
+**Service File Location:**  
+`/etc/systemd/system/myown.service`
+
+**Script / Binary Location:**  
+Any valid path (example: `/path/to/executable`)
+
+
+
+```ini
+[Unit]
+Description=My Own Custom Service
+After=network.target
+Documentation=man:systemd.service(5)
+
+[Service]
+Type=simple
+ExecStart=/path/to/executable
+User=someuser
+Group=somegroup
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+## After Creating the Service
+`sudo systemctl daemon-reload` This command tells the systemd daemon to re-scan and reload service files.When we create or edit a unit files, systemd does not automatically notice the change.
+
+`sudo systemctl start <servicename>` Start immediately the created service.
+
+`sudo systemctl enable <servicename>`  This command enables the service to start automatically at boot.
 
 
 
