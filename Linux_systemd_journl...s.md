@@ -124,7 +124,7 @@ A .service file is divided into three logical sections, each with a specific res
   
 # Required Syntax to Create a systemd Service
 
-##[unit]
+## [unit]
 ```
 [Unit]
 Description=
