@@ -272,9 +272,13 @@ journalctl is the command-line utility used to query, filter, and display logs c
 journalctl is a command-line utility that allows users to view, query, and filter logs generated and stored by systemd-journald.
 
 `journalctl` Show Full log
+
 `journalctl -r` View recent logs first
+
 `journalctl -f` Monitor logs in real-time
+
 `journalctl -u <unit-name>` show by a specific systemd unit
+
 `journalctl -k` Display only kernel messages
 
 
