@@ -261,8 +261,20 @@ systemd-journald supports two log storage modes: **persistent** and **volatile**
 The mode determines where logs are stored and whether they survive reboots.
 In Persistent Storage Logs survive system reboots, Volatile Storage Logs are lost after reboot.
 
+Logs are stored in a volatile manner under `/run/log/journal/`, logs are stored in a persistent manner under `/run/log/journal/`
+
 
 By default, systemd-journald uses Storage=auto, which selects either volatile or persistent storage automatically. To explicitly configure the storage type, a user can edit `/etc/systemd/journald.conf`, uncomment the `Storage=` option, and set it to either **volatile** or **persistent**.
 
+
+## journalctl
+journalctl is the command-line utility used to query, filter, and display logs collected by systemd-journald.
+journalctl is a command-line utility that allows users to view, query, and filter logs generated and stored by systemd-journald.
+
+`journalctl` Show Full log
+`journalctl -r` View recent logs first
+`journalctl -f` Monitor logs in real-time
+`journalctl -u <unit-name>` show by a specific systemd unit
+`journalctl -k` Display only kernel messages
 
 
