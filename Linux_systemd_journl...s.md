@@ -7,6 +7,9 @@ Systemd initializes the system, starts and manages services, handles dependencie
 
 Systemd defines and manages all system unit types (such as services, sockets, timers, devices, and automounts). However, during boot, the init process (systemd running as PID 1) starts only those units that are explicitly configured, enabled for the active target, or triggered by activation mechanisms. All other units remain inactive until required.
 
+All unit files, whether user-created or package-installed, rely on systemd to function.
+
+
 ### Common directories for systemd  units
 `/etc/systemd/system/`
 Stores administrator-defined unit files overrides, and enablement symlinks.
@@ -251,6 +254,15 @@ WantedBy=multi-user.target
 
 `sudo systemctl enable <servicename>`  This command enables the service to start automatically at boot.
 
+
+## journald
+systemd-journald is a service introduced with systemd that collects and stores log data on modern Linux distributions.
+systemd-journald supports two log storage modes: **persistent** and **volatile**.
+The mode determines where logs are stored and whether they survive reboots.
+In Persistent Storage Logs survive system reboots, Volatile Storage Logs are lost after reboot.
+
+
+By default, systemd-journald uses Storage=auto, which selects either volatile or persistent storage automatically. To explicitly configure the storage type, a user can edit `/etc/systemd/journald.conf`, uncomment the `Storage=` option, and set it to either **volatile** or **persistent**.
 
 
 
