@@ -101,3 +101,26 @@
        		ssh -L <local_port>:<target_host>:<target_port> user@target_host
   run this on the attacker machine
   After this, the port is forwarded, and you can access the service on your attacker machine using localhost:<local_port>
+
+
+* ## NFS Privilege Escalation
+
+	NFS (Network File System) is used to share directories between Linux systems over a network.NFS shared directories are configured on the server in the `/etc/exports` file.  
+
+	- If an attacker has permission to read `/etc/exports`, they can see the exported directories and options like `root_squash` or `no_root_squash`.  
+	- Otherwise, the attacker can only enumerate exports using:
+
+	`showmount -e <victim_ip>`
+
+	`showmount -e` lists exported directories and the allowed client hosts, but it **does not reveal** whether `root_squash` or `no_root_squash` is enabled.
+
+	- `root_squash` restricts the client root user to an unprivileged account, while `no_root_squash` allows the client root to act as root on the server, enabling privilege escalation.
+
+	If a directory is exported with `no_root_squash`, the attacker can mount it on **their own system** (not necessarily the target shell) under, for example, `/tmp`:
+
+	`mount -o rw <victim_ip>:/<exported_dir> /tmp/nfs`
+
+	After mounting, the attacker can create a new executable and set the SUID bit. Because of `no_root_squash`:
+	- The file will be owned by `root` on the NFS server
+	- The SUID bit will be preserved
+	Executing this SUID binary on the **target system** will spawn a root shell, resulting in privilege escalation.
