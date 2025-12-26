@@ -110,7 +110,7 @@
 	- If an attacker has permission to read `/etc/exports`, they can see the exported directories and options like `root_squash` or `no_root_squash`.  
 	- Otherwise, the attacker can only enumerate exports using:
 
-	`showmount -e <victim_ip>`
+  			showmount -e <victim_ip>
 
 	`showmount -e` lists exported directories and the allowed client hosts, but it **does not reveal** whether `root_squash` or `no_root_squash` is enabled.
 
@@ -118,7 +118,7 @@
 
 	If a directory is exported with `no_root_squash`, the attacker can mount it on **their own system** (not necessarily the target shell) under, for example, `/tmp`:
 
-	`mount -o rw <victim_ip>:/<exported_dir> /tmp/nfs`
+  		mount -o rw <victim_ip>:/<exported_dir> /tmp/nfs
 
 	After mounting, the attacker can create a new executable and set the SUID bit. Because of `no_root_squash`:
 	- The file will be owned by `root` on the NFS server
