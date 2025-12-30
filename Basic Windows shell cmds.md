@@ -73,4 +73,11 @@ Download Files in Windows CMD Using Certutil
 
 * `curl -o first.exe https://example.com/first.exe`
 
+* `findstr` are used to search for specific strings or values in files or in the output of other commands using piping (|).In findstr, the search pattern can be a plain string or a regular expression (regex
+    
+    * `findstr "<string>" file.txt` -> Finds lines in file.txt that contain the text error(Case-sensitive)
+    * `findstr /i "<string>" file.txt` -> Finds lines in file.txt that contain the text error(Case-insensitive)
+    * `findstr /r "<regex> file.txt" ` -> /r enables regular expression (regex) syntax in
+    * `dir | findstr "<string>"` -> Filters the output of the dir command and displays only the lines that contain the specified string.
+
 
