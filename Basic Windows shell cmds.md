@@ -50,7 +50,7 @@ In Windows, there are two main environments for running commands: cmd.exe and po
          * (OI) ->  Files inside the folder
          * (OI) ->  Subfolders inside the folder
  
-    * Example   icacls <folder> /grant <user>:(OI)(CI)F /T
+    * Example   `icacls <folder> /grant <username>:(OI)(CI)F /T`
 
         /T tells ICACLS to push those inherited permissions down through all existing subfolders
 
