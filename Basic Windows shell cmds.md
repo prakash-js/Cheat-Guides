@@ -80,4 +80,8 @@ Download Files in Windows CMD Using Certutil
     * `findstr /r "<regex> file.txt" ` -> /r enables regular expression (regex) syntax in
     * `dir | findstr "<string>"` -> Filters the output of the dir command and displays only the lines that contain the specified string.
 
+* `more` displays the output of a file or a command one screen (block) at a time, and is commonly used with piping(|)
+    * `more file.txt` -> Displays the contents of file.txt one screen (page) at a time.
+    * ` dir | more` -> Displays the output one screen at a time using piping.
+
 
