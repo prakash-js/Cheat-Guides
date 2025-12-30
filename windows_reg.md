@@ -34,24 +34,24 @@ Windows Registry can be viewed and modified from the Command Prompt using the bu
 
   * `reg query <reg-key> /f <string>`
   
-    /f → Searches for a specified string in value names AND value data
+      /f → Searches for a specified string in value names AND value data
 under the given registry key only (not subkeys unless /s is used).
 
 * `reg query <reg-key> /f <string> /s`
 
-  /s -> To search recursively for the particular string
+    /s -> To search recursively for the particular string
 
 * `reg query <key> /f search.exe /k`
 
-  /k searches only the data (path/content) of a registry value, not the value name (metadata).
+    /k searches only the data (path/content) of a registry value, not the value name (metadata).
 
 *  `reg query <key> /f search.exe /d`
 
-  /d searches inside the value  "**DATA**" (actual stored content), such as the file path stored under a registry key like Run 
+    /d searches inside the value  "**DATA**" (actual stored content), such as the file path stored under a registry key like Run 
 
 *  `reg query <key> /f search.exe /v`
 
-  /v specifies a particular VALUE NAME (the label of the registry entry) to query.
+    /v specifies a particular VALUE NAME (the label of the registry entry) to query.
 
   
 
