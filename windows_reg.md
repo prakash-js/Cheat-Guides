@@ -47,7 +47,8 @@ under the given registry key only (not subkeys unless /s is used).
 
 *  `reg query <key> /f search.exe /d`
 
-    /d searches inside the value  "**DATA**" (actual stored content), such as the file path stored under a registry key like Run 
+    /d searches inside the value  "**DATA**" (actual stored content), such as the file path stored under a registry key like Run. If Windows needs to EXECUTE something → use PATH (/d)
+If Windows needs to DECIDE something → use NUMBER (0/1/2)
 
 *  `reg query <key> /f search.exe /v`
 
