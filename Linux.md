@@ -29,6 +29,12 @@ lsblk is a Linux command that shows all storage devices and their partitions in 
 mount connects a storage device to a directory in the filesystem.
 
   *  `mount <disk_name> <mount_point>`
+## mkfs
+By using the mkfs.<filesystem> tools, we can format a disk partition.
+
+Before formatting, the device must be unmounted.
+
+``
 
 
 
