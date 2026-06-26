@@ -1,0 +1,71 @@
+<syscheck>
+  <disabled>no</disabled>
+  <frequency>300</frequency>
+
+  <!-- Critical System Directories -->
+  <directories check_all="yes" realtime="yes">/etc</directories>
+  <directories check_all="yes" realtime="yes">/root</directories>
+  <directories check_all="yes" realtime="yes">/bin</directories>
+  <directories check_all="yes" realtime="yes">/sbin</directories>
+  <directories check_all="yes" realtime="yes">/usr/bin</directories>
+  <directories check_all="yes" realtime="yes">/usr/sbin</directories>
+
+  <!-- Malware Drop Locations -->
+  <directories check_all="yes" realtime="yes">/tmp</directories>
+  <directories check_all="yes" realtime="yes">/var/tmp</directories>
+  <directories check_all="yes" realtime="yes">/dev/shm</directories>
+
+  <!-- Persistence Locations -->
+  <directories check_all="yes" realtime="yes">/etc/cron.d</directories>
+  <directories check_all="yes" realtime="yes">/etc/crontab</directories>
+  <directories check_all="yes" realtime="yes">/var/spool/cron</directories>
+  <directories check_all="yes" realtime="yes">/etc/init.d</directories>
+  <directories check_all="yes" realtime="yes">/etc/rc.local</directories>
+
+  <!-- User Directories -->
+  <directories check_all="yes" realtime="yes">/home</directories>
+
+  <!-- Log Tampering Detection -->
+  <directories check_all="yes" realtime="yes">/var/log</directories>
+
+  <!-- Library Hijacking -->
+  <directories check_all="yes" realtime="yes">/lib</directories>
+  <directories check_all="yes" realtime="yes">/lib64</directories>
+  <directories check_all="yes" realtime="yes">/usr/lib</directories>
+
+</syscheck>
+
+
+  <!-- 
+    RECURSION LEVELS REFERENCE:
+    No recursion_level tag     = Fully recursive (all subdirs unlimited)
+    recursion_level="0"        = Top level only (no subdirs)
+    recursion_level="1"        = 1 level deep
+    recursion_level="2"        = 2 levels deep
+    check_all
+  -->
+
+
+<!--
+check_all="yes"
+        ↓
+Enables everything below:
+├── check_md5sum="yes"
+├── check_sha1sum="yes"
+├── check_sha256sum="yes"
+├── check_size="yes"
+├── check_owner="yes"
+├── check_group="yes"
+├── check_perm="yes"
+├── check_inode="yes"
+└── check_mtime="yes"
+-->
+
+<!--
+<directories 
+  check_all="no"
+  check_owner="yes"
+  check_group="yes"
+  check_perm="yes"
+  realtime="yes">/bin</directories>
+-->
