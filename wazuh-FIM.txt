@@ -69,3 +69,4 @@ Enables everything below:
   check_perm="yes"
   realtime="yes">/bin</directories>
 -->
+https://bazaar.abuse.ch/sample/946709926db4a2c9a7768af3c6e621dfa79e6fd32560fb72fb2231528f19e0df
