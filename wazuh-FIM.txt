@@ -115,3 +115,7 @@ Enables everything below:
 <directories check_all="yes" realtime="yes">/dev/shm</directories>
 
 
+https://bazaar.abuse.ch/sample/946709926db4a2c9a7768af3c6e621dfa79e6fd32560fb72fb2231528f19e0df/
+
+https://bazaar.abuse.ch/sample/163b7118d867327e13f601e6fdb8e6330fc7359fec8a5c488b7662a73448f5f9/
+
