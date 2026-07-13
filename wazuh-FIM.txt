@@ -69,3 +69,49 @@ Enables everything below:
   check_perm="yes"
   realtime="yes">/bin</directories>
 -->
+
+
+<!-- =========================
+     Linux File Integrity Monitoring
+     ========================= -->
+
+<!-- System configuration -->
+<directories check_all="yes" realtime="yes">/etc</directories>
+<directories check_all="yes" realtime="yes">/boot</directories>
+
+<!-- SSH -->
+<directories check_all="yes" realtime="yes">/root/.ssh</directories>
+<directories check_all="yes" realtime="yes">/home/*/.ssh</directories>
+
+<!-- Systemd persistence -->
+<directories check_all="yes" realtime="yes">/etc/systemd/system</directories>
+<directories check_all="yes" realtime="yes">/usr/lib/systemd/system</directories>
+
+<!-- Watchdog -->
+<directories check_all="yes" realtime="yes">/etc/watchdog.conf</directories>
+<directories check_all="yes" realtime="yes">/etc/watchdog.d</directories>
+
+<!-- Cron persistence -->
+<directories check_all="yes" realtime="yes">/etc/cron.d</directories>
+<directories check_all="yes" realtime="yes">/etc/cron.daily</directories>
+<directories check_all="yes" realtime="yes">/etc/cron.hourly</directories>
+<directories check_all="yes" realtime="yes">/etc/cron.weekly</directories>
+<directories check_all="yes" realtime="yes">/etc/cron.monthly</directories>
+<directories check_all="yes" realtime="yes">/var/spool/cron</directories>
+
+<!-- Executables -->
+<directories check_all="yes" realtime="yes">/usr/local/bin</directories>
+<directories check_all="yes" realtime="yes">/usr/local/sbin</directories>
+
+<!-- Third-party applications -->
+<directories check_all="yes" realtime="yes">/opt</directories>
+
+<!-- Web server -->
+<directories check_all="yes" realtime="yes">/var/www</directories>
+
+<!-- Temporary execution locations -->
+<directories check_all="yes realtime="yes"">/tmp</directories>
+<directories check_all="yes" realtime="yes">/var/tmp</directories>
+<directories check_all="yes" realtime="yes">/dev/shm</directories>
+
+
